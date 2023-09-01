@@ -26,5 +26,6 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             cd /var/www/kevin/html
+            pwd
             rm -rf ./*
             cp -r ${{ steps.build.outputs.artifacts }}/* ./
