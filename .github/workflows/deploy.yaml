@@ -25,6 +25,6 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_PRIVATE_KEY }}
           script: |
-            cd /var/www/kevin/html
-            rm -rf ./*
+            cd /var/www/kevin/html/my-website-2023/out/
+            rm -rf /var/www/kevin/html/my-website-2023/out/*
             cp -r ${{ steps.build.outputs.artifacts }}/* ./
